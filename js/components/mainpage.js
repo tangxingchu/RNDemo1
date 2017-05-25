@@ -45,7 +45,7 @@ export default class MainPage extends Component {
 						  accessibilityLabel="Learn more about this purple button"
 						/>
 					</View>
-					<View style={{flex: 1, flexDirection: 'row', justifyContent:'center', alignItems: 'center'}}><Text>这是标题</Text></View>
+					<View style={{flex: 1, flexDirection: 'row', justifyContent:'center', alignItems: 'center'}}><Text style={{fontSize: 24}}>这是标题</Text></View>
 					<View style={{padding: 2}}>
 						<Button
 						  title="+"
