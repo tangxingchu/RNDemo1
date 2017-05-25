@@ -19,7 +19,7 @@ export default class Container extends Component
 	render() {
 		return (
 			<Provider store={store}>
-				<App value='wadw1231aqq111'/>
+				<App/>
 			</Provider>
 		)
 	}
