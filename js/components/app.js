@@ -1,20 +1,36 @@
 import React, {Component} from 'react';
 import {Navigator} from 'react-native';
-import MainPage from "./mainpage.js";
+import Tabbar from "./Tabbar"
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import appActions from '../actions/application';
 
-export default class App extends Component {
+class App extends Component {
 
 	constructor() {
 		super();
 	}
+
 	render() {
+		console.log(this.props);
 		return (
 				<Navigator
-					initialRoute={{component: MainPage}}
+					initialRoute={{component: Tabbar}}
 					renderScene={(route, navigator) => {
-						return <route.component navigator={navigator} {...route.args}/>
+						return <route.component navigator={navigator} {...route.args} {...this.props}/>
 						}
 				}/>
 		)
 	}
+
 }
+
+export default connect((state) => {
+	return {
+		tabbar: state.tabbar
+	}
+}, (dispatch) => {
+	return {
+		appActions: bindActionCreators(appActions, dispatch)
+	}
+})(App)

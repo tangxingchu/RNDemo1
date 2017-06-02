@@ -20,7 +20,7 @@ export default class MainPage extends Component {
 
 	handleBack = () => {
         if (this.props.navigator.getCurrentRoutes().length > 1) {
-            this.props.navigator.pop()
+            this.props.navigator.pop();
             return true;
         } else {
 			if (this.lastBackPressed && (this.lastBackPressed + 2000 >= Date.now())) {  

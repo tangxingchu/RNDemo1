@@ -17,12 +17,14 @@ export default class City extends Component {
 	_renderRow(rowData) {
 		return (
 			<View style={{flex:1, borderBottomWidth: 1, borderColor: '#ccc'}}>
-				<View style={{flex:1,flexDirection:'row', justifyContent:'flex-start'}}>
-					<View>
-						<Image source={{uri:'ic_launcher'}} style={{width: 72, height: 72}}/>
+				<TouchableOpacity>
+					<View style={{flex:1,flexDirection:'row', justifyContent:'flex-start'}}>
+						<View>
+							<Image source={{uri:'ic_launcher'}} style={{width: 72, height: 72}}/>
+						</View>
+						<View style={{alignItems: 'center', flex: 1, flexDirection:'row'}}><Text>{rowData.Name}</Text></View>
 					</View>
-					<View style={{alignItems: 'center', flex: 1, flexDirection:'row'}}><Text>{rowData.Name}</Text></View>
-				</View>
+				</TouchableOpacity>
 				<View style={{flex:1,flexDirection:'row', justifyContent:'flex-start', paddingLeft: 8}}><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text><Text>{rowData.Name}</Text></View>
 			</View>
 		);
