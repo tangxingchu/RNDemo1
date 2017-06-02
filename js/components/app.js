@@ -27,7 +27,8 @@ class App extends Component {
 
 export default connect((state) => {
 	return {
-		tabbar: state.tabbar
+		tabbar: state.tabbar,
+		test: state.test
 	}
 }, (dispatch) => {
 	return {
