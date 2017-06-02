@@ -11,7 +11,6 @@ export default class Tabbar extends Component {
 
 	render() {
 		let {tabbar, appActions} = this.props;
-		console.log(appActions);
 		return (
 			<TabNavigator>
                     <TabNavigator.Item
