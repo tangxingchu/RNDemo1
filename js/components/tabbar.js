@@ -10,7 +10,7 @@ export default class Tabbar extends Component {
 	}
 
 	render() {
-		let {tabbar, appActions} = this.props;
+		let {tabbar, appActions, navigator} = this.props;
 		return (
 			<TabNavigator>
                     <TabNavigator.Item
@@ -21,7 +21,7 @@ export default class Tabbar extends Component {
                         renderIcon={() => <Image style={styles.icon} source={require("../../images/ic_home_normal.png")} />}
                         renderSelectedIcon={() => <Image style={styles.icon} source={require("../../images/ic_home_checked.png")} />}
                         onPress={() => {appActions.changeTab('首页')} }>
-                        <MainPage/>
+                        <MainPage navigator={navigator}/>
                     </TabNavigator.Item>
                     <TabNavigator.Item
                         selected={tabbar.tabname === '消息'}

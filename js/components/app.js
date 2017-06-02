@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Navigator} from 'react-native';
-import Tabbar from "./Tabbar"
+import Tabbar from "./tabbar"
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import appActions from '../actions/application';
