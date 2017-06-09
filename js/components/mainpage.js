@@ -23,13 +23,13 @@ export default class MainPage extends Component {
             this.props.navigator.pop();
             return true;
         } else {
-			if (this.lastBackPressed && (this.lastBackPressed + 2000 >= Date.now())) {  
+			if (this.lastBackPressed && (this.lastBackPressed + 2000 >= Date.now())) {
 				//最近2秒内按过back键，可以退出应用.
 				return false;
-			}  
-			this.lastBackPressed = Date.now();  
-			ToastAndroid.show('再按一次退出应用',ToastAndroid.SHORT);  
-			return true; 
+			}
+			this.lastBackPressed = Date.now();
+			ToastAndroid.show('再按一次退出应用',ToastAndroid.SHORT);
+			return true;
 		}
         return false;
 	}
