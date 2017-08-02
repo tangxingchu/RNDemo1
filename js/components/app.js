@@ -7,8 +7,8 @@ import appActions from '../actions/application';
 
 class App extends Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+        super(props);
 	}
 
 	render() {
